@@ -22,7 +22,8 @@ COPY --from=builder application/dockerize ./
 ARG EXPOSED_PORT
 EXPOSE ${EXPOSED_PORT}
 
-ENV SPRING_PROFILES_ACTIVE docker
+# environment variable is provided via docker-compose.yml
+# ENV SPRING_PROFILES_ACTIVE docker
 
 COPY --from=builder application/dependencies/ ./
 COPY --from=builder application/spring-boot-loader/ ./

@@ -23,6 +23,7 @@ import reactor.core.publisher.Mono;
 
 import java.util.List;
 
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.joining;
 
 /**
@@ -31,6 +32,7 @@ import static java.util.stream.Collectors.joining;
 @Component
 @RequiredArgsConstructor
 public class VisitsServiceClient {
+
 
     // Could be changed for testing purpose
     private String hostname = "http://visits-service/";

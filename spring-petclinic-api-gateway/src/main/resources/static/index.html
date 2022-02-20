@@ -49,6 +49,16 @@
 
     <script src="/scripts/infrastructure/infrastructure.js"></script>
     <script src="/scripts/infrastructure/httpErrorHandlingInterceptor.js"></script>
+
+    <script src="/scripts/elastic-apm/elastic-apm-rum.umd.min.js" crossorigin></script>
+    <!-- Change the following APM_Server_URL -->
+    <script>
+      elasticApm.init({
+        serviceName: 'spring-petclinic-js',
+        serverUrl: 'APM_Server_URL',
+        environment: 'dev'
+      })
+    </script>
 </head>
 
 <body class="container">
